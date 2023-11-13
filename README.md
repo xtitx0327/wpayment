@@ -23,9 +23,17 @@
 npm install --save wpayment
 ```
 
+基本的使用流程为：
+1. 创建一个 `WPayment` 对象，调用 `login()` 方法获取微信登录链接，请自行转化为二维码后用**收款者**的微信登录；
+2. 登录后可在需要时调用 `createOrder()` 方法创建订单，并记下返回的 `Order` 对象的 `verifyCode` 属性（一个四位数字）；
+3. 此时，用户可以扫描收款者的**赞赏码**（不是收款码！），**准确无误**地填写付款金额，并在“备注”一栏输入 `verifyCode`，然后支付.
+4. 支付完成后，`createOrder()` 方法参数中的 `onPaid()` 回调将会被调用.
+
+另外，考虑到用户误操作的情况（如忘记输错金额、输错 `verifyCode`、订单超时后才支付），`WPayment` 对象还提供了 `queryOrder` 方法，确保可通过付款者微信昵称、付款金额、微信转账单号等方式查询订单信息. 更详细的使用说明，见 `/docs/document.md`. 
+
 一个简单的 Demo 如下：
 ```javascript
-const WPayment = require('./index.js').default;
+const WPayment = require('wpayment').default;
 const qrcode = require('qrcode');
 
 let intervalID, timeLeft = 300;
