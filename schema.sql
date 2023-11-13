@@ -1,0 +1,24 @@
+DROP TABLE IF EXISTS orders;
+DROP TABLE IF EXISTS unverifiedOrders;
+
+CREATE TABLE IF NOT EXISTS orders (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    orderID VARCHAR(255) UNIQUE NOT NULL,
+    amount VARCHAR(255) NOT NULL,
+    createTime BIGINT NOT NULL,
+    expire BIGINT NOT NULL,
+    verifyCode VARCHAR(255) NOT NULL,
+    status VARCHAR(255) NOT NULL,
+    transID VARCHAR(255),
+    paidTime BIGINT,
+    payer VARCHAR(255)
+);
+
+CREATE TABLE IF NOT EXISTS unverifiedOrders (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    amount VARCHAR(255) NOT NULL,
+    transID VARCHAR(255) NOT NULL,
+    paidTime BIGINT NOT NULL,
+    payer VARCHAR(255),
+    comment VARCHAR(255)
+);

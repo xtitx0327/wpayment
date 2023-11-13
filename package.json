@@ -1,0 +1,21 @@
+{
+	"name": "wechaty-payment",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build": "tsc"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"npm": "^10.2.3",
+		"qrcode": "^1.5.3",
+		"sqlite": "^5.1.1",
+		"sqlite3": "^5.1.6",
+		"typescript": "^5.2.2",
+		"wechaty": "^1.20.2",
+		"xml2js": "^0.6.2"
+	},
+	"type": "commonjs"
+}
