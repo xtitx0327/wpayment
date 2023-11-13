@@ -1,8 +1,9 @@
 {
-	"name": "wechaty-payment",
-	"version": "1.0.0",
-	"description": "",
+	"name": "wpayment",
+	"version": "1.0.1",
+	"description": "WPayment — 使用赞赏码的微信免签支付包",
 	"main": "index.js",
+	"types": "index.d.ts",
 	"scripts": {
 		"build": "tsc"
 	},
@@ -17,5 +18,8 @@
 		"wechaty": "^1.20.2",
 		"xml2js": "^0.6.2"
 	},
-	"type": "commonjs"
+	"type": "commonjs",
+	"files": [
+		"index.js", "index.ts", "index.d.ts", "README.md", "package.json", "schema.sql", "orders.db"
+	]
 }

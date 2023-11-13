@@ -1,7 +1,9 @@
-const WPayment = require('./index.js').default;
+const WPayment = require('wpayment').default;
 const qrcode = require('qrcode');
 
 let intervalID, timeLeft = 300;
+
+const payment = new WPayment();
 
 payment.login((linkGetter) => {
     // 登录请求回调

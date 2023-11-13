@@ -1,4 +1,5 @@
 {
+    "files": ["index.ts"],
     "compilerOptions": {
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
