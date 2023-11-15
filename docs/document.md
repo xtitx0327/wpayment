@@ -125,6 +125,7 @@ npm install --save wpayment
    | comment   | `string`                             | 留言                 | 否    | 无   |
    | transID   | `string`                             | 微信订单号           | 否    | 无   |
 
+    若  `orderID` 和 `transID` 为空，则 `amount` 不能为空，且必须与 `payer` 或 `comment` 组合使用（即后两者不能全为空）.
 
 ### Order 类
 

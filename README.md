@@ -38,6 +38,8 @@ const qrcode = require('qrcode');
 
 let intervalID, timeLeft = 300;
 
+const payment = new WPayment();
+
 payment.login((linkGetter) => {
     // 登录请求回调
     const link = linkGetter();

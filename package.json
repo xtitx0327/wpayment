@@ -1,6 +1,6 @@
 {
 	"name": "wpayment",
-	"version": "1.0.1",
+	"version": "1.0.3",
 	"description": "WPayment — 使用赞赏码的微信免签支付包",
 	"main": "index.js",
 	"types": "index.d.ts",
